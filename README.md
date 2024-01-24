@@ -1,23 +1,18 @@
-# Plexamp Docker
-
-This repository allows building a docker image of [Plexamp](https://plexamp.com/). Since Plexamp 4.7.0, Plexamp reads the claim and the player name from environment variables. This makes it much easier to spawn a Docker image.
-
-```yaml
-version: '3'
-services:
-   plexamp:
-     container_name: plexamp 
-     privileged: true
-     image: ghcr.io/anatosun/plexamp:arm64v8
-     devices:
-        - "/dev/snd:/dev/snd"
-     volumes: 
-        - ./config:/root/.local/share/Plexamp/Settings  # replace that with the appropriate host binding
-     environment:
-        - PLEXAMP_CLAIM_TOKEN=claim-XXXXXXXXXX # get your claim at https://www.plex.tv/claim/
-        - PLEXAMP_PLAYER_NAME=docker # replace this with your player name
-     ports:
-        - 32500:32500
-        - 20000:20000
-     restart: unless-stopped
+### How to use?
+1. Clone this repo.
+```shell
+git clone https://github.com/GeekSquirrel/plexamp-headless-docker
+cd plexamp-headless-docker
 ```
+2. Build your image.
+```shell
+docker build -t plexamp:latest .
+```
+3. Modify compose.yaml. PLEXAMP_CLAIM_TOKEN is required and you can change other values following the comments.
+4. Run with Docker Compose
+```shell
+docker compose up -d
+```
+5. Open it in http://[your-ip]:32500
+6. If you get "Coulnd't start Playback" when you play a song. Try to tap "Disconnect" button in casting menu, refresh, and then reconnect. It works if the volume bar appears at the bottom of the casting menu.
+<img width="375" alt="image" src="https://github.com/GeekSquirrel/plexamp-headless-docker/assets/127181546/444f3ec8-3ec7-45e4-94d1-7515097befa2">
