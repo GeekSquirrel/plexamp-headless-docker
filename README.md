@@ -15,4 +15,4 @@ docker compose up -d
 ```
 5. Open it in http://[your-ip]:32500
 6. If you get "Coulnd't start Playback" when you play a song. Try to tap "Disconnect" button in casting menu, refresh, and then reconnect. It works if the volume bar appears at the bottom of the casting menu.
-<img width="375" alt="image" src="https://github.com/GeekSquirrel/plexamp-headless-docker/assets/127181546/444f3ec8-3ec7-45e4-94d1-7515097befa2">
+<img width="375" alt="Screenshot 2024-01-25 012257" src="https://github.com/GeekSquirrel/plexamp-headless-docker/assets/127181546/36d0e4aa-a092-4235-9880-654e283e3c6c">
