@@ -10,6 +10,6 @@ services:
     volumes:
       - ./config:/root/.local/share/Plexamp/Settings # replace that with the appropriate host binding
     environment:
-      - PLEXAMP_CLAIM_TOKEN=claim-xxxxxxxxxx # get your claim at https://www.plex.tv/claim/. Note the token EXPIRES in 4 minutes
+      - PLEXAMP_CLAIM_TOKEN=xxxxxxxx # get your claim at https://www.plex.tv/claim/. Note the token EXPIRES in 4 minutes
       - PLEXAMP_PLAYER_NAME=docker # replace this with your player name
     restart: always
