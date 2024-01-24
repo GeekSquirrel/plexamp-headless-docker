@@ -1,10 +1,8 @@
-FROM node:16-bullseye
+FROM ubuntu:jammy
 
+COPY setup.sh /
+RUN bash /setup.sh
 
-RUN apt-get update && apt-get install -y -q --no-install-recommends \
-        jq \
-        wget \
-        libasound2 
 ENV WORKDIR /home/root/
 RUN mkdir -p $WORKDIR
 WORKDIR $WORKDIR
