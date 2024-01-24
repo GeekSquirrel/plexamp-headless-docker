@@ -12,7 +12,4 @@ services:
     environment:
       - PLEXAMP_CLAIM_TOKEN=claim-xxxxxxxxxx # get your claim at https://www.plex.tv/claim/. Note the token EXPIRES in 4 minutes
       - PLEXAMP_PLAYER_NAME=docker # replace this with your player name
-    ports:
-      - 32500:32500
-      - 20000:20000
     restart: always
