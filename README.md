@@ -3,6 +3,7 @@
 ```shell
 git clone https://github.com/GeekSquirrel/plexamp-headless-docker
 cd plexamp-headless-docker
+git checkout ubuntu-based
 ```
 2. Build your image.
 ```shell
